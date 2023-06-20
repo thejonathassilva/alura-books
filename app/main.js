@@ -1,7 +1,7 @@
 let books = [];
 const endpoint = 'https://guilhermeonrails.github.io/casadocodigo/livros.json'
 
-getBooks() 
+getBooks();
 
 async function getBooks() {
   const response = await fetch(endpoint);

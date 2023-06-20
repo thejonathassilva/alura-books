@@ -1,6 +1,7 @@
 let section = document.querySelector('#livros');
 
 function showBooks(bookList) {
+  section.innerHTML = ' '
   bookList.forEach(book => {
     if(book.quantidade > 0) {
       section.innerHTML += `<div class="livro">
