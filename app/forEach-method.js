@@ -1,7 +1,9 @@
 let section = document.querySelector('#livros');
+const elementWithTotalValue = document.querySelector('#valor_total_livros_disponiveis');
 
 function showBooks(bookList) {
-  section.innerHTML = ' '
+  elementWithTotalValue.innerHTML = '';
+  section.innerHTML = '';
   bookList.forEach(book => {
       let availability = book.quantidade > 0 ? 'livro__imagens' : 'livro__imagens indisponivel';
       section.innerHTML += `<div class="livro">
