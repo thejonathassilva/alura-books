@@ -5,7 +5,7 @@ function searchedBooks() {
   const elementButton = document.querySelector(`#${this.id}`);
   if(elementButton) {
     const category = elementButton.value;
-    let selectedCategory = books.filter(book => book.categoria == category)
+    let selectedCategory = category == 'disponivel' ? books.filter(book => book.quantidade > 0) : books.filter(book => book.categoria == category)
     showBooks(selectedCategory);
   }
 }
